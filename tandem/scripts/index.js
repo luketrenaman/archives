@@ -1,6 +1,7 @@
 import shapes from "./drawing/shapes.js";
 import key from "./utilities/keypress.js";
 import fps from "./utilities/fps.js";
+let started = false;
 let notes = require("./resources/notes1.js");
 let notes2 = require("./resources/notes2.js");
 key.listen();
@@ -32,6 +33,10 @@ loader.load((loader,resources) => {
 let stage = new PIXI.Container();
 game.addChild(stage);
  app.view.onmousedown = function(){
+   if(started){
+     return;
+   }
+   started = true;
    /*  #3498db
   #e74c3c */
   title.visible = false;

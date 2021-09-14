@@ -72,8 +72,7 @@
 	function fonts() {
 	  WebFont.load({
 	    custom: {
-	      families: ['Montserrat'],
-	      urls: ["/stylesheet.css"]
+	      families: ['Montserrat']
 	    },
 	    active: function active(e) {
 	      // now start setting up your PixiJS (or canvas) stuff!

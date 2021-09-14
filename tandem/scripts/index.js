@@ -13,8 +13,7 @@ let game = app.stage;
 function fonts(){
   WebFont.load({
       custom: {
-          families: ['Montserrat',],
-          urls:["/stylesheet.css"]
+          families: ['Montserrat']
       },
       active:e=>{
           // now start setting up your PixiJS (or canvas) stuff!

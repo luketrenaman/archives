@@ -26,7 +26,7 @@ gulp.task('webpack',function(){
     .pipe(browserSync.stream());
 })
 
-gulp.task('default',["browserSync"], function(callback) {
+gulp.task('default',gulp.series("browserSync"), function(callback) {
             browserSync.reload()
                 gulp.watch(cwd + 'scripts/**/*',["webpack"])
                 gulp.watch(cwd + '**/*.html', browserSync.reload); //reload
